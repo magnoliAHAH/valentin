@@ -2,10 +2,35 @@
     margin-top: 10px;
 }
 
+.main-gif {
+    max-width: 25vh;
+    display: block;
+}
+
+.main-part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Pacifico', cursive;
+
+}
+
+h1 {
+    color: hotpink;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
 button {
     background: hotpink;
     color: white;
 }
+
 
 #message {
     color: white
