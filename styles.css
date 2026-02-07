@@ -1,3 +1,12 @@
-h1{
-    color: aqua;
+.buttons {
+    margin-top: 10px;
+}
+
+button {
+    background: hotpink;
+    color: white;
+}
+
+#message {
+    color: white
 }
