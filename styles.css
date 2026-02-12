@@ -36,7 +36,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Pacifico', cursive;
+    font-family: 'Press Start 2P', monospace;
+    
     background: white;
 
 }
@@ -44,17 +45,17 @@ body {
 h1 {
     color: hotpink;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
-    font-size: 5vh;
+    font-size: 2vh;
 }
 
 button {
+    font-family: 'Press Start 2P', monospace;
     background: hotpink;
     color: white;
-    font-family: 'Pacifico', cursive;
     border-radius: 3vh;
-    font-size: 4vh;
+    font-size: 2vh;
     border: pink;
-    padding: 2vh;
+    padding: 1vh;
     margin: 1vh;
     
 }
@@ -63,4 +64,67 @@ button {
 
 #message {
     color: white
+}
+
+#lock-screen {
+  position: fixed;
+  inset: 0;
+  background: #111;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.lock {
+  display: flex;
+  gap: 16px;
+}
+
+.digit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.digit span {
+  font-size: 32px;
+  margin: 8px 0;
+}
+
+.digit button {
+  background: #ff4d6d;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.particle {
+  position: fixed;
+  bottom: -50px;
+
+  width: 24px;
+  height: 24px;
+
+  pointer-events: none;
+  opacity: 0.9;
+
+  animation: floatUp linear forwards;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) rotate(var(--rot)) scale(0.8);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(var(--height)) rotate(calc(var(--rot) + 90deg)) scale(1);
+    opacity: 0;
+  }
 }

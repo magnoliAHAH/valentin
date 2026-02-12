@@ -8,20 +8,50 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
-    <div class="main-part">
-        <img src="assets/general.gif" class="main-gif">
-        <h1>Будешь моей <br> Валентинкой?</h1>
-        <div class="buttons">
-            <button id="yes">Да</button>
-            <button id="no">Нет</button>
-        </div>
-    </div>
-   
+    <div id="lock-screen">
+        <h2>Введи код 💖</h2>
 
-    <p id="message"></p>
+        <div class="lock">
+            <div class="digit">
+                <button class="up">▲</button>
+                <span>0</span>
+                <button class="down">▼</button>
+            </div>
+            <div class="digit">
+                <button class="up">▲</button>
+                <span>0</span>
+                <button class="down">▼</button>
+            </div>
+            <div class="digit">
+                <button class="up">▲</button>
+                <span>0</span>
+                <button class="down">▼</button>
+            </div>
+        </div>
+
+        <button id="unlock">OK</button>
+        <p id="lock-msg"></p>
+    </div>
+
+    <!-- ТВОЙ СУЩЕСТВУЮЩИЙ КОНТЕНТ -->
+    <div id="main-content" style="display:none;">
+        <div class="main-part">
+            <img src="assets/general.gif" class="main-gif">
+            <h1>Будешь моей <br> Валентинкой?</h1>
+            <div class="buttons">
+                <button id="yes">Да</button>
+                <button id="no">Нет</button>
+            </div>
+        </div>
+
+        <p id="message"></p>
+    </div>
+
     <script src="script.js"></script>
 </body>
 
