@@ -128,3 +128,29 @@ button {
     opacity: 0;
   }
 }
+
+.no-btn {
+  background-color: transparent;
+  color: hotpink;
+  border: 2px solid hotpink;
+  border-color: hotpink;
+}
+
+button {
+  transition:
+    transform 0.2s ease,
+    left 0.4s ease,
+    top 0.4s ease;
+}
+
+/* эффект клика */
+button:active {
+  transform: scale(0.92);
+}
+
+/* подпрыгивание */
+@keyframes jump {
+  0% { transform: scale(1); }
+  50% { transform: scale(0.9) translateY(-4px); }
+  100% { transform: scale(1); }
+}

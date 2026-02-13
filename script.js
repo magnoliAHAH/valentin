@@ -1,7 +1,7 @@
 const noBtn = document.getElementById('no');
 const yesBtn = document.getElementById('yes');
 const message = document.getElementById('message');
-const correctCode = "405";
+const correctCode = "000";
 
 const digits = document.querySelectorAll('.digit');
 const unlockBtn = document.getElementById('unlock');
@@ -43,8 +43,9 @@ noBtn.addEventListener('click', () => {
   const phrase = phrases[Math.floor(Math.random() * phrases.length)];
   noBtn.textContent = phrase;
 
-  const bodyWidth = document.body.clientWidth - noBtn.offsetWidth;
-  const bodyHeight = document.body.clientHeight - noBtn.offsetHeight;
+  const bodyWidth = window.innerWidth - noBtn.offsetWidth;
+  const bodyHeight = window.innerHeight - noBtn.offsetHeight;
+
 
   const x = Math.floor(Math.random() * bodyWidth);
   const y = Math.floor(Math.random() * bodyHeight);
