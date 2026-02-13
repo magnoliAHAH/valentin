@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+
 
 </head>
 
@@ -51,6 +53,39 @@
 
         <p id="message"></p>
     </div>
+
+    <!-- ВТОРАЯ СТРАНИЦА -->
+<div id="second-screen" style="display:none;">
+  <div class="main-part">
+    
+    <img src="assets/heart.png" class="small-heart">
+    <h1>С Днём Святого Валентина!</h1>
+    <img src="assets/ura.gif" class="main-gif">
+    <p class="subtext">
+      Поздравляю тебя с этим прекрасным днём! Ты для меня очень важна, и я хочу, чтобы ты знала, что я всегда буду рядом, поддерживать тебя и делать всё, чтобы ты была счастлива. Спасибо тебе за то, что ты есть в моей жизни. Я очень сильно люблю тебя, моё солнышко!
+    </p>
+    <p class="subtext">
+        А ты меня?
+    </p>
+
+    <div class="buttons">
+      <button id="second-yes">Да</button>
+      <button id="second-no" class="no-btn">Нет</button>
+    </div>
+  </div>
+</div>
+
+<!-- ALERT -->
+<div id="alert-overlay" style="display:none;">
+  <div class="alert-box">
+    <p>💖 Я знал! 💖</p>
+    <img src="assets/gifter.jpg" width="100px">
+    <p>Поэтому держи небольшой подарочек</p>
+    <img src="assets/barcode.jpg" class="barcode">
+    <button id="close-alert">ОК</button>
+  </div>
+</div>
+
 
     <script src="script.js"></script>
 </body>

@@ -46,6 +46,7 @@ h1 {
     color: hotpink;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
     font-size: 2vh;
+    font-family: "Comic Relief", system-ui;
 }
 
 button {
@@ -153,4 +154,61 @@ button:active {
   0% { transform: scale(1); }
   50% { transform: scale(0.9) translateY(-4px); }
   100% { transform: scale(1); }
+}
+#second-screen {
+  position: fixed;
+  inset: 0;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.subtext {
+  margin: 12px 0 20px;
+  font-size: 18px;
+  font-family: "Comic Relief", system-ui;
+  padding: 20px;
+  text-align: justify;
+}
+
+/* ALERT */
+#alert-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 2000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.alert-box {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  text-align: center;
+  animation: pop 0.3s ease;
+}
+
+.alert-box img {
+  max-width: 300px;
+  margin-bottom: 12px;
+}
+
+@keyframes pop {
+  from { transform: scale(0.8); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+
+.small-heart {
+    max-width: 5vh;
+    display: block;
+}
+
+.barcode {
+    display: block;
+    margin: 20px auto;
+    width: 300px;
 }

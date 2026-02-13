@@ -106,3 +106,35 @@ function spawnParticle() {
 
 // запуск
 setInterval(spawnParticle, SPAWN_INTERVAL);
+
+const secondScreen = document.getElementById('second-screen');
+
+yesBtn.addEventListener('click', () => {
+  mainContent.style.display = 'none';
+  secondScreen.style.display = 'flex';
+});
+const secondYes = document.getElementById('second-yes');
+const secondNo = document.getElementById('second-no');
+
+const alertOverlay = document.getElementById('alert-overlay');
+const closeAlert = document.getElementById('close-alert');
+
+// YES → alert с картинкой
+secondYes.addEventListener('click', () => {
+  alertOverlay.style.display = 'flex';
+});
+
+// закрыть alert
+closeAlert.addEventListener('click', () => {
+  alertOverlay.style.display = 'none';
+});
+
+// NO → убегает
+secondNo.addEventListener('click', () => {
+  const x = Math.random() * (window.innerWidth - secondNo.offsetWidth);
+  const y = Math.random() * (window.innerHeight - secondNo.offsetHeight);
+
+  secondNo.style.position = 'absolute';
+  secondNo.style.left = x + 'px';
+  secondNo.style.top = y + 'px';
+});
