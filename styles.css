@@ -1,5 +1,6 @@
 .buttons {
     margin-top: 10px;
+    margin-bottom: 3vh;
 }
 
 .main-gif {
@@ -37,7 +38,6 @@ body {
     justify-content: center;
     align-items: center;
     font-family: 'Press Start 2P', monospace;
-    
     background: white;
 
 }
@@ -45,20 +45,22 @@ body {
 h1 {
     color: hotpink;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
-    font-size: 2vh;
+    font-size: 4vh;
     font-family: "Comic Relief", system-ui;
+    text-align: center;
+    margin-top: -5px;
 }
 
 button {
     font-family: 'Press Start 2P', monospace;
     background: hotpink;
     color: white;
-    border-radius: 3vh;
-    font-size: 2vh;
-    border: pink;
-    padding: 1vh;
-    margin: 1vh;
-    
+    border-radius: 4vh;
+    font-size: 2.5vh;
+    padding: 2vh;
+    margin: 2vh;
+    border: 2px solid hotpink;
+    border-color: hotpink;
 }
 
 
@@ -133,8 +135,6 @@ button {
 .no-btn {
   background-color: transparent;
   color: hotpink;
-  border: 2px solid hotpink;
-  border-color: hotpink;
 }
 
 button {
@@ -205,10 +205,21 @@ button:active {
 .small-heart {
     max-width: 5vh;
     display: block;
+    margin-top: 5vh;
 }
 
 .barcode {
     display: block;
     margin: 20px auto;
     width: 300px;
+}
+
+#typing::after {
+  content: "|";
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
 }

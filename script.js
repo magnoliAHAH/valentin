@@ -1,7 +1,7 @@
 const noBtn = document.getElementById('no');
 const yesBtn = document.getElementById('yes');
 const message = document.getElementById('message');
-const correctCode = "000";
+const correctCode = "405";
 
 const digits = document.querySelectorAll('.digit');
 const unlockBtn = document.getElementById('unlock');
@@ -137,4 +137,30 @@ secondNo.addEventListener('click', () => {
   secondNo.style.position = 'absolute';
   secondNo.style.left = x + 'px';
   secondNo.style.top = y + 'px';
+});
+
+const text = "Поздравляю тебя с этим прекрасным днём! Ты для меня очень важна, и я хочу, чтобы ты знала, что я всегда буду рядом, поддерживать тебя и делать всё, чтобы ты была счастлива. Спасибо тебе за то, что ты есть в моей жизни. Я очень сильно люблю тебя, моё солнышко!";
+const speed = 70;
+const delayTyping = 1500;
+let i = 0;
+let isTyping = false;
+
+
+function typeWriter() {
+  if (i < text.length) {
+    document.getElementById("typing").textContent += text.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+
+document.getElementById("yes").addEventListener("click", () => {
+  if (isTyping) return; // чтобы не запускалось повторно
+  isTyping = true;
+
+  i = 0;
+  document.getElementById("typing").textContent = "";
+  setTimeout(() => {
+    typeWriter();
+  }, delayTyping);
 });
