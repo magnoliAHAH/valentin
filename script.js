@@ -164,3 +164,15 @@ document.getElementById("yes").addEventListener("click", () => {
     typeWriter();
   }, delayTyping);
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const showBtn = document.getElementById('show-barcode');
+  const spoiler = document.getElementById('spoiler');
+  const barcode = document.getElementById('barcode');
+
+  showBtn.addEventListener('click', () => {
+    spoiler.classList.add('hidden');
+    barcode.classList.add('visible');
+  });
+});
+

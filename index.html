@@ -41,7 +41,7 @@
     </div>
 
     <!-- ТВОЙ СУЩЕСТВУЮЩИЙ КОНТЕНТ -->
-    <div id="main-content" style="display:none;">
+    <div id="main-content" class="scene" style="display:none;">
         <div class="main-part">
             <img src="assets/general.gif" class="main-gif">
             <h1>Будешь моей <br> Валентинкой?</h1>
@@ -63,11 +63,11 @@
     <img src="assets/ura.gif" class="main-gif">
     <p id="typing" class="subtext">
     </p>
-    <p class="subtext" style="margin: -40px 0 -20px;">
+    <p id="question" class="subtext hidden" style="margin: -40px 0 -20px;">
         А ты меня?
     </p>
 
-    <div class="buttons">
+    <div id="second-buttons" class="buttons hidden">
       <button id="second-yes">Да</button>
       <button id="second-no" class="no-btn">Нет</button>
     </div>
@@ -80,7 +80,13 @@
     <p>💖 Я знал! 💖</p>
     <img src="assets/gifter.jpg" width="100px">
     <p>Поэтому держи небольшой подарочек</p>
-    <img src="assets/barcode.jpg" class="barcode">
+    <div class="spoiler-wrapper">
+      <img src="assets/barcode.jpg" class="barcode" id="barcode">
+
+      <div class="spoiler" id="spoiler">
+        <button id="show-barcode">Показать 💝</button>
+      </div>
+    </div>
     <button id="close-alert">ОК</button>
   </div>
 </div>
